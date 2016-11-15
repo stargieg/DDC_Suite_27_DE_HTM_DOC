@@ -87,7 +87,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Steuerfunktion Ausgangssignal</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Output.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -103,12 +103,12 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Rückmeldesignal zu gross</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Feedback.ObjectName)@str(A.BACnet.Feedback.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'>BI / Alarm</p>
+  <p class=MsoNormal align=center style='text-align:center'>AI</p>
   </td>
  </tr>
  <tr>
@@ -119,12 +119,28 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Rückmeldesignal zu klein</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.AlHigh.ObjectName)@str(A.BACnet.AlHigh.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'>BI / Alarm</p>
+  <p class=MsoNormal align=center style='text-align:center'>BV / Alarm</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=40 valign=top style='width:30.3pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>2</p>
+  </td>
+  <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.AlHigh.ObjectName)@str(A.BACnet.AlLow.DetailedText)</p>
+  </td>
+  <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>BV / Alarm</p>
   </td>
  </tr>
  <tr>
@@ -135,7 +151,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Handeingriff</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.AlMInt.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;

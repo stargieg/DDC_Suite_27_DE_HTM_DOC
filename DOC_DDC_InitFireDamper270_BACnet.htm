@@ -87,7 +87,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Befehl „Test starten“</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Start.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -103,7 +103,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Befehl „Test abbrechen“</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Stop.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -135,7 +135,23 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Anzahl erfolgreich getesteter Klappen</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.State.ObjectName)</p>
+  </td>
+  <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>BV</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=28 valign=top style='width:21.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.CntOK.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -151,7 +167,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Anzahl Klappen mit Rückmeldefehler</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.CntErr.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;

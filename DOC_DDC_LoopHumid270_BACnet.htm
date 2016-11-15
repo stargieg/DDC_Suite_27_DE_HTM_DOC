@@ -87,7 +87,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Minimaler Wert Regelsignal Befeuchter</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Signal.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -103,7 +103,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Maximaler Wert Regelsignal Befeuchter</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.SetPt.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -119,7 +119,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><span lang=NO-BOK>Proportionalband</span></p>
+  <p class=MsoNormal><span lang=NO-BOK>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Param.ObjectName)@str(A.BACnet.Param.P.DetailedText)</span></p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -135,7 +135,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><span lang=NO-BOK>Nachstellzeit</span></p>
+  <p class=MsoNormal><span lang=NO-BOK>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Param.ObjectName)@str(A.BACnet.Param.I.DetailedText)</span></p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -151,7 +151,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><span lang=NO-BOK>Differnenzialzeit</span></p>
+  <p class=MsoNormal><span lang=NO-BOK>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Param.ObjectName)@str(A.BACnet.Param.D.DetailedText)</span></p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -167,7 +167,23 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Sollwert Zulufttemperatur</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Param.ObjectName)@str(A.BACnet.Param.Min.DetailedText)</p>
+  </td>
+  <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>AV</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=40 valign=top style='width:30.3pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>3</p>
+  </td>
+  <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Param.ObjectName)@str(A.BACnet.Param.Max.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;

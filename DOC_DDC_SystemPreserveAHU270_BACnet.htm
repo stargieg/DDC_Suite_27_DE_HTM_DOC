@@ -87,7 +87,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Freie Kühlung: Vorwahl</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.SNC_HMI.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -103,7 +103,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Freie Kühlung: Minimale Aussenlufttemperatur</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.SNC_ToMin.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -119,8 +119,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Freie Kühlung: Hysterese zwischen Istwert Raumtemperatur
-  und Istwert Außenlufttemperatur als Einschaltkriterium</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.SNC_HystRtToOn.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -136,8 +135,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Freie Kühlung: Hysterese zwischen Istwert Raumtemperatur
-  und Istwert Außenlufttemperatur als Ausschaltkriterium</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.SNC_HystRtToOff.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -153,8 +151,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Freie Kühlung: Hysterese zwischen Istwert Raumtemperatur und
-  Sollwert Raumtemperatur als Einschaltkriterium</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.SNC_HystRtOff.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -170,7 +167,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Auskühlschutz: Vorwahl</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Frost_HMI.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -186,7 +183,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Auskühlschutz: Einschalten bei Istwert kleiner</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Frost_LimitOn.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -202,7 +199,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Auskühlschutz: Ausschalten bei Istwert grösser</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Frost_LimitOff.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -218,7 +215,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Zwangskühlung: Vorwahl</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Cool_HMI.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -234,7 +231,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Zwangskühlung: Einschalthysterese</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Cool_HystOn.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -250,7 +247,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Zwangskühlung: Ausschalthysterese</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Cool_HystOff.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;

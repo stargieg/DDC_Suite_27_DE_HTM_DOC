@@ -52,34 +52,34 @@ definierten Alarmnummern sind nachstehend aufgelistet.&nbsp; </p>
  <tr>
   <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Rückmeldung Auf fehlt</p>
+  <p class=MsoNormal>@str(A.Alarming.System)@STR(A.Alarming.Key.ToLevel10)@str(A.FBox.Description)@str(A.FBox.AlOpen.Alarmtext)</p>
   </td>
   <td width=164 valign=top style='width:122.8pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'>@adj_AlmIdx+0.0p@</p>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_AlmIndex+0.0p@</p>
   </td>
  </tr>
  <tr>
   <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Rückmeldung Zu fehlt</p>
+  <p class=MsoNormal>@str(A.Alarming.System)@STR(A.Alarming.Key.ToLevel10)@str(A.FBox.Description)@str(A.FBox.AlClose.Alarmtext)</p>
   </td>
   <td width=164 valign=top style='width:122.8pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'>@adj_AlmIdx+1.0p@</p>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_AlmIndex+1.0p@</p>
   </td>
  </tr>
  <tr>
   <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Handeingriff</p>
+  <p class=MsoNormal>@str(A.Alarming.System)@STR(A.Alarming.Key.ToLevel10)@str(A.FBox.Description)@str(A.FBox.AlMInt.Alarmtext)</p>
   </td>
   <td width=164 valign=top style='width:122.8pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'>@adj_AlmIdx+2.0p@</p>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_AlmIndex+2.0p@</p>
   </td>
  </tr>
 </table>

@@ -87,12 +87,12 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Schaltfunktion</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Output.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'>BO / Commandable</p>
+  <p class=MsoNormal align=center style='text-align:center'>MO / Commandable</p>
   </td>
  </tr>
  <tr>
@@ -103,12 +103,12 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Betriebsmeldung </p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Feedback.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'>BI</p>
+  <p class=MsoNormal align=center style='text-align:center'>MI</p>
   </td>
  </tr>
  <tr>
@@ -119,12 +119,12 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Wartungsmeldung </p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.Maintenance.ObjectName)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'>BI / Alarm</p>
+  <p class=MsoNormal align=center style='text-align:center'>BV / Alarm</p>
   </td>
  </tr>
  <tr>
@@ -135,7 +135,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Betriebsstunden Stufe 1</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.HoursCountSp1.ObjectName)@str(A.BACnet.HoursCountSp1.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -151,7 +151,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Betriebsstunden Stufe 2</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.HoursCountSp2.ObjectName)@str(A.BACnet.HoursCountSp2.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -167,7 +167,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Schaltungen Stufe 1</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.OnCountSp1.ObjectName)@str(A.BACnet.OnCountSp1.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -183,7 +183,7 @@ werden. Höherwertige Optionen beinhalten auch die niederwertigen.</p>
   <td width=396 valign=top style='width:297.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal>Schaltungen Stufe 2</p>
+  <p class=MsoNormal>@STR(A.BACnet_ON.Key.ToLevel10)@str(A.BACnet.OnCountSp2.ObjectName)@str(A.BACnet.OnCountSp2.DetailedText)</p>
   </td>
   <td width=171 valign=top style='width:128.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
