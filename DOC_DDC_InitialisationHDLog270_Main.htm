@@ -1,0 +1,339 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Historische
+Datenaufzeichnung in der Steuerung</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Die Steuerung ist in der Lage
+historische Daten autark aufzuzeichnen. Diese Daten können dann an einer
+Web-Bedienung abgerufen werden, ggf. werden diese Daten auch von einer
+Leitstation ausgelesen und dort weiter verarbeitet.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Die Steuerung stellt einen Teil
+des Speichers für diese historischen Daten zur Verfügung. Da sich Programm,
+Texte und die historischen Daten den gleichen Speicher teilen müssen hängt die
+Kapazität des zur Verfügung stehenden Speichers von diesen Werten ab.
+Theoretisch können maximal 640 KB verwendet werden, dies hängt aber vom
+Steuerungstyp und den zuvor genannten Daten ab.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Als Kenngrösse gilt das 1 KB
+Speicher bei einer zyklischen Aufzeichnung von 60 Sekunden einen über die
+letzten 2 Stunden abspeichern kann. Bei einer maximalen Belegung von 640 KB * 2
+Stunden/KB ergibt sich eine theoretische Aufzeichnungsdauer von 1280 Stunden
+(=53 Tage) für einen Wert.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Anstatt einer zyklischen
+Aufzeichnung kann auch alternativ eine Aufzeichnung nur bei einer Wertänderung
+parametriert werden, dies verlängert in der Regel die in die Vergangenheit
+zurückreichenden Daten, macht aber eine genaue Aussage wie lange diese
+zurückreichen nicht möglich, hier ist dann nur eine Angabe der mindestens
+garantiert zu speichernden Daten möglich. </p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Generell werden 4 verschiedene
+Datentypen unterschieden die eigene Aufzeichnungsregeln haben. Diese 4
+Datentypen sind Sollwerte, Messwerte, stetige Signale und Rückmeldungen.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Hier sind nur die
+Aufzeichnungsregeln definiert, welche Werte aus der Anlage tatsächlich
+aufgezeichnet werden ist in den Detailbeschreibungen enthalten.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Aufzeichnungsregeln für Sollwerte</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:#99CC00;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#99CC00;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufzeichnung bei einer Wertänderung von mindestens</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SwMinDff.1p@
+  (Einheit)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Verzögerung zwischen 2 Aufzeichnungen</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SwMinDly.1p @
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Erzwungene zyklische Aufzeichnung nach (0 Sekunden deaktiviert
+  diese Option, dann nur Aufzeichnung bei Wertänderung)</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SwCyc.1p @ s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufzeichnung (0=Füllen&amp;Stopp, 1=Ringspeicher)</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SwTyp.0p @</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Aufzeichnungsregeln für Istwerte</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:#99CC00;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#99CC00;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufzeichnung bei einer Wertänderung von mindestens</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_MwMinDff.1p@
+  (Einheit)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Verzögerung zwischen 2 Aufzeichnungen</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_MwMinDly.1p @
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Erzwungene zyklische Aufzeichnung nach (0 Sekunden deaktiviert
+  diese Option, dann nur Aufzeichnung bei Wertänderung)</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_MwCyc.1p @ s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufzeichnung (0=Füllen&amp;Stopp, 1=Ringspeicher)</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_MwTyp.0p @</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Aufzeichnungsregeln für stetige Signale</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:#99CC00;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#99CC00;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufzeichnung bei einer Wertänderung von mindestens</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_YMinDff.1p@
+  (Einheit)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Verzögerung zwischen 2 Aufzeichnungen</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_YMinDly.1p @ s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Erzwungene zyklische Aufzeichnung nach (0 Sekunden deaktiviert
+  diese Option, dann nur Aufzeichnung bei Wertänderung)</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_YCyc.1p @ s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufzeichnung (0=Füllen&amp;Stopp, 1=Ringspeicher)</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_YTyp.0p @</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Aufzeichnungsregeln für Rückmeldungen</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:#99CC00;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#99CC00;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Verzögerung zwischen 2 Aufzeichnungen</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_StMinDly.1p @
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Erzwungene zyklische Aufzeichnung nach (0 Sekunden
+  deaktiviert diese Option, dann nur Aufzeichnung bei Wertänderung)</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_StCyc.1p @ s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufzeichnung (0=Füllen&amp;Stopp, 1=Ringspeicher)</p>
+  </td>
+  <td width=159 valign=top style='width:119.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_StTyp.0p @</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

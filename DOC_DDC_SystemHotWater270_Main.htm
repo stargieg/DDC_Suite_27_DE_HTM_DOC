@@ -1,0 +1,304 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Warmwasserbereiter @@&amp;name@@</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Warmwasserbereitung mit Legionellenschaltung. Die Freigabe
+besteht aus 3 Ebenen:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>Handschalter. Dieser Schalter hat die Stellungen Auto - Ein.
+     Ist kein Handschalter vorhanden kann z.B. dieser Parameter für eine übergeordnete
+     virtuelle Bedienung verwendet werden. Ist BACnet aktiviert zeigt dieser
+     Parameter zeigt dann &lt;Auto&gt; an wenn die resultierende
+     Anlagenfreigabe von BACnet identisch mit der Anforderung ist (egal ob die
+     Anlage Aus oder Ein sein soll). Wird durch BACnet eine abweichende
+     Betriebsart erzwungen wird der entsprechende Zustand angezeigt (z.B. Aus
+     oder Ein)</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>GLT-Schalter. Nur wirksam, wenn der Handschalter auf
+     &lt;Auto&gt; steht. Dieser Schalter hat die Stellungen Aus - Auto - Ein. Dieser
+     Parameter wird normalerweise in der virtuellen Bedienung an einer SCADA oder
+     WebPanel verwendet.</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>Automatikanforderungen. Nur wirksam, wenn der Handschalter
+     und der GLT-Schalter auf Auto stehen. In der Stellung Auto wird Warmwasser
+     in Abhängigkeit der Uhr aufbereitet, in der Stellung Ein ist der Bereiter
+     im Dauerbetrieb. In Stellung Aus ist die Legionellenschaltung ebenfalls
+     inaktiv. Unterschreitet die Speichertemperatur oben den Parameter
+     Einschalten kleiner °C, wird der Warmwasserbereiter eingeschalten. Überschreitet
+     die Speichertemperatur unten den Parameter Ausschalten größer °C, wird der
+     Warmwasserbereiter ausgeschalten. </li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Legionellenschaltung</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Die Legionellenschaltung kann über einen GLT Schalter vorgewählt
+werden. In der Stellung Aus erfolgt keine Legionellenbetrieb, in der Stellung
+Auto einmalig pro Woche, bzw. täglich an einem festgelegten Tag zu einer
+bestimmten Uhrzeit. Der Warmwasserbereiter wird bis auf die Temperatur
+Aufheizen bis °C erwärmt. Wird diese Temperatur nicht erreicht, wird der Legionellenbetrieb
+nach der Maximalen Aufheizdauer beendet.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Vorrangschaltung</b></p>
+
+<p class=MsoNormal>Über einen eigenen GLT Schalter kann die Vorrangschaltung
+aktiviert werden. Steht diese auf Auto, wird bei jedem Einschalten des
+Warmwasserbereiters die Information Vorrang gesetzt, mit dem ggf. statische
+Heizkreise abgeschaltet werden, um die Speicherladung zu bevorzugen. Um eine zu
+lange Abschaltung von der Vorrangschaltung beeinflussten Heizkreise zu
+vermeiden, kann eine maximale Dauer der Vorrangschaltung eingestellt werden. Ist
+nach Ablauf dieser Zeit die gewünschte Brauchwassertemperatur noch nicht
+erreicht, wird die Information Vorrang zurückgesetzt, der Warmwasserbereiter
+aber weiter in Betrieb.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Ladekreis</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Erfolgt die Freigabe des Warmwasserbereiters (Normalbetrieb
+oder Legionellenbetrieb) wird eine gewünschte Ladetemperatur für einen ggf. vorhandenen
+Primärregelkreis ermittelt. Diese errechnet sich im</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>Normalbetrieb aus Ausschalten größer °C + Hysterese
+     Ladetemperatur °C</li>
+ <li class=MsoNormal>Legionellenbetrieb aus Aufheizen auf °C + Hysterese
+     Ladetemperatur °C</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Ist der Warmwasserbereiter inaktiv, beträgt der Sollwert 20
+°C.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>GLT-Schalter (1=Auto, 2=Aus, 3=Ein)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Vorwahl.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Uhrenfunktion (0=in Steuerung, 1=von SCADA)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_UhrTyp.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Gewählter Schaltkanal in Steuerung (1..10 = Schaltkanal
+  1..10, 11=nicht verwendet)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Kanal.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Einschaltgrenzwert</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_GwEin.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Ausschaltgrenzwert</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_GwAus.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufschlag auf Sollwert Vorlauftemperatur Ladekreis</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_LadeHysterese.1p@
+  °K</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>GLT-Schalter Legionellenschaltung (1=Auto, 2=Aus, 3=vvia
+  SCADA)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_LegVorwahl.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Tag der Legionellenschaltung (1..7=Mo..So, 8=täglich)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_LegWochentag.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zeitpunkt der Legionellenschaltung</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_LegZeit.2p@ Uhr</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aufheizgrenzwert für Legionellenschaltung</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_LegGwAus.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Maximale Dauer der Legionellenschaltung</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_LegDauer.0p@
+  min.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>GLT-Schalter Legionellenschaltung (1=Auto, 2=Aus, 3=vvia
+  SCADA)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_VorVorwahl.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Maximale Dauer der Vorrangschaltung</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_VorDauer.0p@
+  min.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Redundanz @@&amp;name@@</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Steuerung von 2 Antrieben mit automatischem Wechsel der
+Priorität je nach Betriebszähler, festem Zeitpunkt oder Störung eines
+Antriebes, </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>I.d.R. läuft immer nur ein Antrieb. Eine Umschaltung erfolgt
+z.B. bei Störung des aktiven Antriebes. Um eine gleichmässige Nutzung der zu
+erreichen kann eine Umschaltung bei Betriebsstundendifferenz eingestellt
+werden. Dadurch wird sicher gestellt das beide Pumpen eine annähernd (eben
+diese Differenz) gleiche Auslastung erreichen.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Alternativ kann auch eine fixe Umschaltung des zu
+schaltenden Antriebes parametriert werden, z.B. jeden Montag um 08:00 Uhr. Dies
+kann aber je nach bedarf und Anforderung zu erheblichen Betriebsdifferenzen
+führen.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Des weiteren besteht die Möglichkeit eine Pumpe als fixe
+Führungspumpe zu definieren. Der zweite Antrieb wird dann immer als
+Sekundärpumpe Dazugeschalten.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Redundante Steuerung (0=Aus, 1=Auto, 2=Pumpe 1, 3=Pumpe 2,
+  4=Pumpe1+2)</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Vorwahl.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Typ der Umschaltung (0=Std.-Differenz, 1=Tag/Uhrzeit)</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Typ.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Stundendifferenz</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_StdDifferenz.0p@
+  Std.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Wochentag (0=täglich, 1..7=Mo..So)</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Wochentag.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Uhrzeit</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Uhrzeit.2p@
+  Uhr</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

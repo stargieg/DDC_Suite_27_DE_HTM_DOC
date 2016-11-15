@@ -1,0 +1,249 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Kesselanlage @@&amp;name@@</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Freigabe einer Kesselanlage in Abhängigkeit von Verbraucher
+oder Außentemperatur. Die Freigabe besteht aus 3 Ebenen:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>Handschalter. Dieser Schalter hat die Stellungen Auto
+     Bedarf - Auto AT - Ein. Ist kein Handschalter vorhanden kann z.B. dieser
+     Parameter für eine übergeordnete virtuelle Bedienung verwendet werden. Ist
+     BACnet aktiviert zeigt dieser Parameter zeigt dann &lt;Auto&gt; an wenn
+     die resultierende Anlagenfreigabe von BACnet identisch mit der Anforderung
+     ist (egal ob die Anlage Aus oder Ein sein soll). Wird durch BACnet eine
+     abweichende Betriebsart erzwungen wird der entsprechende Zustand angezeigt
+     (z.B. Aus oder Ein)</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>GLT-Schalter. Nur wirksam, wenn der Handschalter auf
+     &lt;Auto Bedarf&gt; steht. Dieser Schalter hat die Stellungen Aus - Auto
+     Bedarf - Auto AT - Ein. Dieser Parameter wird normalerweise in der
+     virtuellen Bedienung an einer SCADA oder WebPanel verwendet.</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>Automatikanforderungen. Nur wirksam, wenn der Handschalter
+     und der GLT-Schalter auf Auto stehen.</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Die Schalterstellungen Bedarf und AT-Kurve stellen sich wie
+folgt dar:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>Bedarf: die Kesselanlage wird freigegeben wenn der
+     Sollwert der Verbarucher zuzüglich der &quot;Überhöhung Verbraucher&quot; größer
+     oder gleich dem minimalen Sollwert der AT-Kurve (Y4) ist.</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>AT-Kurve: die Kesselanlage wird freigegeben wenn die Außenlufttemperatur
+     unter dem Grenzwert Heizgrenze Aussentemperatur und der errechnete
+     Sollwert nach Außenkurve größer oder gleich dem minimalen Sollwert der AT-Kurve
+     (Y4) ist.</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>Dauer: der Sollwert Y1 wird ausgegeben</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>GLT-Schalter (1=Auto Bedarf, 2=Auto AT-Kurve, 3=Aus,
+  4=Dauer)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Vorwahl.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Heizgrenzwert Aussenlufttemperatur</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Heizgrenze.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Überhöhung Sollwert Verbraucher</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SollwertHyst.1p@
+  °K</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Minimale Aussenlufttemperatur (X1)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveX1.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehöriger Sollwert Vorlauftemperatur (Y1)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveY2.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aussenlufttemperatur Stützpunk (X2)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveX2.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehöriger Sollwert Vorlauftemperatur (Y2)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveY2.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aussenlufttemperatur Stützpunkt (X3)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveX3.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehöriger Sollwert Vorlauftemperatur (Y3)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveY3.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Maximale Aussenlufttemperatur (X4)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveX4.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehöriger Sollwert Vorlauftemperatur (Y4)</p>
+  </td>
+  <td width=169 valign=top style='width:127.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveY4.1p@ °C</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

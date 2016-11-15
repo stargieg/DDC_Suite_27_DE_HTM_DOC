@@ -1,0 +1,180 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Frostüberwachung @@&amp;name@@</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Frostschutzüberwachung des
+Vorerhitzers für Lüftungsanlagen mittels luftseitigen Thermostat und
+Rücklauftemperaturfühler wasserseitig. Das Frostprogramm läuft wie folgt ab :</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>1. Ermittlung einer Frostwarnung
+durch luftseitigen Frostschutzthermostat oder Rücklauftemperatur kleiner
+Grenzwert Frostwarnung bei Rücklauftemperatur kleiner °C .</p>
+
+<p class=MsoNormal style='text-align:justify'>2. Meldung der jeweiligen Frostwarnung,
+melden Frostprogramm aktiv</p>
+
+<p class=MsoNormal style='text-align:justify'>3. Nach Ablauf der Verzögerung für
+die 1. Warnung kann ein Impuls zur Hardwarequittierung angestoßen werden um zu
+prüfen, ob der luftseitige Frostschutz wieder in Selbsthaltung geht.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>4a. Ist nach der
+Hardwarequittierung die Rücklauftemperatur größer dem Grenzwert Normalmeldung
+bei Rücklauftemperatur größer °C und der Frostschutzthermostat in
+Normalstellung, geht das Forstprogramm in dern Normalzustand über und eine Überwachungszeit
+Verzögerung für die 2. Warnung gestartet. Tritt innerhalb dieses Zeitraums
+erneut eine Frostwarnung auf, wird die Meldung Frostgefahr an Lufterhitzer gesetzt.
+Die Störung muss über die Zentrale Quittierung zurückgesetzt werden.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>4b. Liegt nach der
+Hardwarequittierung die Rücklauftemperatur noch nicht über dem Grenzwert
+Normalmeldung bei Rücklauftemperatur größer °C oder der Frostschutzthermostat
+ist noch in Alarmstellung, wird die Meldung Frostgefahr an Lufterhitzer gesetzt.
+Die Störung muss über die Zentrale Quittierung zurückgesetzt werden.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Um Geistermeldungen bei Ausfall
+einer Sicherung zu vermeiden, kann eine Meldungsunterdrückung in Abhängigkeit
+der zugehörigen Spannungsüberwachung erfolgen.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=210 valign=top style='width:157.8pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Luftseitiger Thermostate, Normalzustand (0=NO, 1=NC)</p>
+  </td>
+  <td width=210 valign=top style='width:157.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_ThermostatNoNc.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Luftseitiger Thermostate, Unterdrückung der Störung bei
+  fehlender Sicherung (0=nie, 1=immer, 2=230 VAC, 3=24 VAC, 4=24 VDC,
+  5=Phasenwächter, 6=Steuerspannung) </p>
+  </td>
+  <td width=210 valign=top style='width:157.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_ThermostatSpgGrp.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Rücklauftemperatur, Grenzwert Frostwarnung Alarm</p>
+  </td>
+  <td width=210 valign=top style='width:157.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_RuecklauftempGwEin.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Rücklauftemperatur, Grenzwert Frostwarnung Normalzustand</p>
+  </td>
+  <td width=210 valign=top style='width:157.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_RuecklauftempGwAus.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>1. Verzögerung (mit erstmaliger Frostwarnung)</p>
+  </td>
+  <td width=210 valign=top style='width:157.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Verzoegerung1te.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>2. Verzögerung (nach erstmaliger Frostwarnung)</p>
+  </td>
+  <td width=210 valign=top style='width:157.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Verzoegerung2te.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehörige Sicherungsüberwachung</p>
+  </td>
+  <td width=210 valign=top style='width:157.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@@&amp;ref@@</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

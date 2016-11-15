@@ -1,0 +1,284 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Überschrift @&amp;name@</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 56.7pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span lang=DE-CH style='font-size:14.0pt'>Messwert
+@@&amp;name@@</span></b></p>
+
+<p class=MsoNormal><span lang=DE-CH>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>Erfassung des
+Messwertes mit Kalibrierung, Filterung, und Grenzwertüberwachung. Der
+angeschlossene Analogwert kann je nach Typ aufbereitet werden.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='text-align:justify'><span lang=DE-CH>PCD2.W220
+     NI1000 DIN : der Rohwert wird von der Karte geliefert
+     (Standard/Analogmodule/PCD2.W220) und der physikalische Wert hier
+     errechnet</span></li>
+ <li class=MsoNormal style='text-align:justify'><span lang=DE-CH>PCD2.W340
+     NI1000 DIN : der Rohwert wird von der Karte geliefert
+     (Standard/Analogmodule/PCD2.W340) und der physikalische Wert hier
+     errechnet</span></li>
+ <li class=MsoNormal style='text-align:justify'><span lang=DE-CH>der
+     Physikalische Wert liegt bereits am Eingangskontakt an</span></li>
+ <li class=MsoNormal style='text-align:justify'><span lang=DE-CH>Umrechnung:
+     ein beliebiger Wert (meist von einem aktiven Sensor) wird anhand einer
+     Geradengleichung umgerechnet.</span></li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>Der erfasste
+Messwert kann durch Angabe einer Korrektur Kalibriert werden. Anschliessend wir
+der Messwert gefiltert. Es kann eingestellt werden wie oft der Messwert
+abgetastet werden soll, der Glättungsfaktor gibt den Anteil an der bei einer
+Messwertänderung in den neuen Messwert einfließt. Beispiel: Aktueller Messwert
+10,0 °C, Neuer Messwert 14,3 °C, Glättungsfaktor 10.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>Die Formel
+lautet: Aktueller Messwert=(Neuer Messwert - Aktueller Messwert) /
+Glättungsfaktor + Aktueller Messwert</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>Aktueller
+Messwert=(14,3 - 10,0) / 10 + 10,0 = 4,3 / 10 + 10,0 = 10,4 °C</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>Je größer der
+Glättungsfaktor, umso träger der Messwert. Bei Faktor 1 wird der neue Messwert
+direkt verwendet.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>Es wird
+zusätzlich auf einen oberen und unteren Grenzwert überwacht. Um
+Geistermeldungen bei Ausfall einer Sicherung zu vermeiden kann eine
+Meldungsunterdrückung in Abhängigkeit der zugehörigen Spannungsüberwachung
+erfolgen.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.2in;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Einheit</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@STR(A.Trend.Object.AxisUnit)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=DE-CH>Messwerterfassung (0/1=NI 1000, 2=bereits
+  physikalisch, 3=Umrechnung)</span></p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_MesswertTyp.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Korrekturwert (Kalibrierung)</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@ adj_Korrektur.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Messwertfilter Abtastung alle</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_FilterZeit.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=DE-CH>Messwertfilter Fakturierung der Differenz
+  alter/neuer Wert</span></p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_FilterFaktor.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Minimaler physikalischer Messwert</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_MesswertY1.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Maximaler physikalischer Messwert</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_MesswertY2.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=DE-CH>bei Messwerterfassung „Umrechnung“ –
+  minimaler Rohwert</span></p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_RohwertX1.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=DE-CH>bei Messwerterfassung „Umrechnung“ –
+  minimaler Rohwert</span></p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_RohwertX2.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=DE-CH>Unterdrückung der Grenzwertmeldungen
+  (0=nie, 1=immer, 2=230 VAC, 3=24 VAC, 4=24 VDC, 5=Phasenwächter,
+  6=Steuerspannung) </span></p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SpgGrp.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Zugehörige Spannungsüberwachung</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@@&amp;ref@@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Oberer Grenzwert</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_GwOben.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Unterer Grenzwert</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_GwUnten.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Zugehörige Sicherungsüberwachung</p>
+  </td>
+  <td width=159 valign=top style='width:119.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@@&amp;ref@@</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=DE-CH>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

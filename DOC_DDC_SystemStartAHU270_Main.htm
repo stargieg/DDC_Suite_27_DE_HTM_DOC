@@ -1,0 +1,263 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Startphase Lüftung
+@@&amp;name@@</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Diese Funktion sammelt alle wichtigen Anlagenzustände
+(Entfeuchtung, Auskühlschutz etc.) und stellt diese anderen Funktionen zur
+Verfügung, insbesondere für die lüftungsspezifischen Regler.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Sie gibt der Reihe nach die Anlagenbauteile einer
+Lüftungsanlage frei. Besteht keine Anforderung, z.B. vom Anlagenschalter, wird
+die Lüftung sofort abgeschalten. Mit der Freigabe wird die Startsequenz aktiviert.
+</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Vorspülung Vorerhitzer</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Die Vorspülung des Vorerhitzers wird angestoßen (siehe auch
+Regler Vorerhitzer). Die Vorspülung dient zur Erwärmung des Vorerhitzers durch
+Pumpenwarmwasser um einer Frostmeldung beim Start der Ventilatoren im Winter vorzubeugen.
+Diese wird beendet wenn:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>die Außenlufttemperatur größer dem Grenzwert Vorspülen
+     Ende bei Aussentemperatur &gt; °C liegt</li>
+ <li class=MsoNormal>oder die Rücklauftemperatur größer dem Grenzwert Vorspülen
+     bis Rücklauftemperatur Vorerhitzer &gt; °C</li>
+ <li class=MsoNormal>maximal aber für die Dauer der Vorspülung Erhitzer</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Klappen öffnen</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Nach Beendigung der Vorspülung erfolgt die Freigabe der
+Klappenantriebe. Erst nach Rückmeldung der Klappenantriebe Auf wird die
+Startsequenz fortgesetzt. Bei Mischluftanlagen kann dies jedoch unvermittelt
+erfolgen da ja immer ein Luftweg offen ist.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Zulüfter</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Wenn die Rückmeldung Auf der Klappen vorhanden ist wird der
+Zuluftmotor freigegeben </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Ablüfter</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Nach Freigabe des Zuluftmotors wird eine Verzögerung
+gestartet die eine Lastspitze bei gleichzeitiger Einschaltung von grossen
+Motoren verhindern soll. Nach Ablauf dieser Verzögerung wird der Abluftmotor
+freigegeben. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Regelung / Sollwertrampe Zulufttemperatur</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Nach Freigabe des Abluftmotors wird eine Verzögerung
+gestartet die es den Ventilatoren ermöglichen soll eine stabile Luftmenge
+aufzubauen und die ggf. vorhandene überschüssige Wärme durch die Vorspülphase
+abzubauen. Nach Ablauf der Verzögerung wird die Regelung Freigegeben.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Mit Freigabe der Regelung wird auch die Sollwertrampe der
+Zulufttemperatur gestartet. Durch die verzögerte Freigabe der Regelung wurde
+bereits schon ggf. vorhandene überschüssige Wärme aus dem Lüftungsgerät
+entfernt. Trotzdem kann die Zulufttemperatur noch deutlich zu hoch sein z.B.
+durch einen schlecht eingestellten Kaltstartwert des Vorerhitzers. Um ein
+übermässigen Reglersprung mit Aufschwingen und Gefahr einer Frostmeldung bei
+Regelfreigabe zu verhindern kann die Sollwertrampe genutzt werden.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Mit Freigabe der Regelung wird der Istwert der
+Zulufttemperatur als Sollwert ausgegeben. Anschliessend läuft dieser Sollwert
+über die eingestellte Dauer auf den Rampenendwert herunter (ein hochlaufen
+funktioniert ebenfalls). Damit startet der Vorerhitzerregler mit einer
+Null-Abweichung und läuft dann langsam dem Sollwert hinterher.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Grenzwertüberwachung</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Nach Ablauf der Sollwertrampe wird eine Verzögerung
+gestartet. Nach Ablauf dieser Verzögerung wird die Grenzwertüberwachung
+freigegeben. Damit kann der Regelung ausreichend Zeit gegeben werden auf den Betriebspunkt
+zu kommen bevor eine Üverwachung der Sollwerte aktiviert wird.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Maximale Dauer der Vorspülung</p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SpuelenDauer.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Verzögerung zwischen Freigabe Zulüfter und Ablüfter</p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_AbluftVerz.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Verzögerung zwischen Freigabe Ablüfter und Regelung</p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_ReglerVerz.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Rampenzeit Sollwert Zulufttemperatur</p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SwZuluftRampe.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Verzögerung zwischen Sollwertrampe beendet und
+  Grenzwertüberwachung</p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_GrenzenVerz.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Grenzwert Aussenlufttemperatur Abschaltung Vorspülen</p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SpuelenAt.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Grenzwert Rücklauftemperatur Vorerhitzer Abschaltung
+  Vorspülen</p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SpuelenRlGw.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Minimaler Sollwert Zuluftrampe</p>
+  </td>
+  <td width=172 valign=top style='width:129.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SwZuluftMin.1p@
+  °C</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

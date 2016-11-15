@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Überschrift @&amp;name@</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 56.7pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span lang=DE-CH>Alarmverwaltung </span></b></p>
+
+<p class=MsoNormal><span lang=DE-CH>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=DE-CH>Die ermittelten
+Alarmdatenpunkte können in einer internen Alarmliste aufgezeichnet werden. Die
+Anzahl und die definierten Alarmnummern sind nachstehend aufgelistet.&nbsp; </span></p>
+
+<p class=MsoNormal><span lang=DE-CH>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.2in;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:#FF9900;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Alarmbezeichnung</b></p>
+  </td>
+  <td width=164 valign=top style='width:122.8pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#FF9900;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Nummer</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>@str(A.Alarming.System)@STR(A.Alarming.Key.ToLevel10)@str(A.FBox.Description)@str(A.FBox.Alarm.Alarmtext)</p>
+  </td>
+  <td width=164 valign=top style='width:122.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_AlmIndex+0.0p@</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=DE-CH>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

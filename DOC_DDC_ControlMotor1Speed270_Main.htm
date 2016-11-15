@@ -1,0 +1,159 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Motorsteuerung 1-stufig
+@@&amp;name@@</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Ansteuerung eines 1-stufigen
+Motors. Die Ansteuerung besteht aus 3 Ebenen:</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify'>Handschalter. Dieser Schalter
+     hat die Stellungen Aus - Auto - Ein. Die Stellung wird nach
+     Programmdownload einmalig auf &quot;Auto&quot; eingestellt. Ist kein
+     Handschalter vorhanden kann z.B. dieser Parameter für eine übergeordnete
+     virtuelle Bedienung verwendet werden. Ist BACnet aktiviert kann dieser
+     Parameter nicht anderweitig verwendet werden. Dieser Parameter zeigt dann
+     &lt;Auto&gt; an wenn die resultierende Anlagenfreigabe von BACnet
+     identisch mit der Anforderung ist (egal ob die Anlage Aus oder Ein sein
+     soll). Wird durch BACnet eine abweichende Betriebsart erzwungen wird der
+     entsprechende Zustand angezeigt (z.B. Aus oder Ein)</li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify'>GLT-Schalter. Nur wirksam, wenn
+     der Handschalter auf &lt;Auto&gt; steht. Dieser Schalter hat die
+     Stellungen Aus - Auto - Ein. Dieser Parameter wird normalerweise in der
+     virtuellen Bedienung an einer SCADA oder WebPanel verwendet. </li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify'>Automatikanforderungen. Nur
+     wirksam, wenn der Handschalter und der GLT-Schalter auf Auto stehen. Die
+     Anforderung kommt i.d.R. von einer Start- oder Uhrenfunktion</li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'><b>Betriebsdaten / Wartung</b></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Es erfolgt eine Zählung der
+Betriebsstunden und der Schaltspiele. Bei erreichen der eingestellten
+Maximalwerte wird eine Wartungsmeldung ausgegeben. Diese kann über eine
+Zentrale Quittierung zurückgesetzt werden oder einzeln und nur für diesen
+Antrieb.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=186 valign=top style='width:139.8pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>GLT-Schalter (1=Auto, 2=Aus, 3=Ein)</p>
+  </td>
+  <td width=186 valign=top style='width:139.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_HMI.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Startverzögerung</p>
+  </td>
+  <td width=186 valign=top style='width:139.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Startverzoegerung.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Anzahl Einschaltungen bis Wartungsmeldung erfolgt</p>
+  </td>
+  <td width=186 valign=top style='width:139.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_SchaltungenMax.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Anzahl Betriebsstunden bis Wartungsmeldung erfolgt</p>
+  </td>
+  <td width=186 valign=top style='width:139.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_StundenMax.0p@
+  Std.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Heizkreis @@&amp;name@@</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Sollwertberechnung und Freigabe
+für einen statischen Heizkreis. Die Freigabe besteht aus 3 Ebenen:</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify'>Handschalter. Dieser Schalter
+     hat die Stellungen Auto - Frost - Nacht - Tag. Ist kein Handschalter
+     vorhanden kann z.B. dieser Parameter für eine übergeordnete virtuelle
+     Bedienung verwendet werden. Ist BACnet aktiviert zeigt dieser Parameter
+     dann &lt;Auto&gt; an wenn die resultierende Anlagenfreigabe von BACnet
+     identisch mit der Anforderung ist (egal ob die Anlage Aus oder Ein sein
+     soll). Wird durch BACnet eine abweichende Betriebsart erzwungen wird der
+     entsprechende Zustand angezeigt (z.B. Aus oder Ein)</li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify'>GLT-Schalter. Nur wirksam, wenn
+     der Handschalter auf &lt;Auto&gt; steht. Dieser Schalter hat die
+     Stellungen Aus - Auto - Frost - Nacht - Tag - IB Fussboden - Kaminkehrer.
+     Dieser Parameter wird normalerweise in der virtuellen Bedienung an einer
+     SCADA oder WebPanel verwendet.</li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify'>Automatikanforderungen. Nur
+     wirksam, wenn der Handschalter und der GLT-Schalter auf Auto stehen. Bei
+     fehlender Freigabe durch die Heizperiode ist der Heizkreis für die
+     Automatikfunktionen verriegelt. Ist der Parameter &quot;Uhrenfreigabe
+     durch&quot; auf GLT gestellt sind diese Funktionen deaktiviert und die
+     FBox erwartet das eine Visualisierung den Parameter &quot;Anforderung von
+     Uhr&quot; aktiv beschreibt. Ist jedoch BACnet mit &lt;HMI/Uhr&gt;
+     aktiviert sind alle Uhrfunktionen inaktiv und die Schaltfunktion ist über
+     einen Scheduler zu realisieren.</li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Die Heizgrenze
+Außenlufttemperatur setzt den Sollwert Heizkreis auf 20 °C, wenn die
+Außenlufttemperatur diesen Grenzwert überschreitet, auch wenn aus der Heizkurve
+ein errechneter Sollwert größer 21 °C vorliegt. Die Einzelnen Betriebsarten
+sind wie folgt:</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify'>Aus: Der Heizkreis bleibt
+     ausgeschalten, der Sollwert bei 20 °C</li>
+ <li class=MsoNormal style='text-align:justify'>Frost: Der Heizkreis bleibt
+     ausgeschalten, bis die Frostschutztemperatur (Außentemperatur oder
+     Raumtemperatur), unter den Einschaltgrenzwert fällt. Der Sollwert berechnet
+     sich aus dem errechneten Sollwert der Heizkurve. Der Heizkreis wird wieder
+     ausgeschalten, wenn die Frostschutztemperatur über den Ausschaltgrenzwert
+     steigt. Die Vorrangschaltung schaltet den Heizkreis nicht aus, falls
+     dieser eingeschaltet wurde.</li>
+ <li class=MsoNormal style='text-align:justify'>Nacht: Der Heizkreis wird
+     freigegeben, der Sollwert berechnet sich aus dem errechneten Sollwert der
+     Heizkurve abzüglich der Nachtabsenkung. Die Vorrangschaltung schaltet den
+     Heizkreis aus.</li>
+ <li class=MsoNormal style='text-align:justify'>Tag: Der Heizkreis wird
+     freigegeben, der Sollwert berechnet sich aus dem errechneten Sollwert der
+     Heizkurve. Die Vorrangschaltung schaltet den Heizkreis aus.</li>
+ <li class=MsoNormal style='text-align:justify'>Kaminkehrer: Der Heizkreis wird
+     für die eingestellte Dauer auf den Sollwert der Heizkurve Y1 gefahren.
+     Nach Ablauf der Zeit schaltet sich der Heizkreis automatisch in die zuvor
+     eingestellte Betriebsart zurück.</li>
+ <li class=MsoNormal style='text-align:justify'>Inbetriebnahme
+     Fussbodenheizung: Der Heizkreis wird über den eingestellten Zeitraum von
+     21,0 °C auf den Sollwert der Heizkurve Y1 gefahren. Nach Ablauf der Zeit
+     schaltet sich der Heizkreis automatisch in die Betriebsart Automatik.</li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>GLT-Schalter (1=Auto, 2=Aus, 3=Frost, 4=Nacht, 5=Tag,
+  6=Kaminkehrer, 7=IB Fussboden)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Vorwahl.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Uhrenfunktion (0=in Steuerung, 1=von SCADA)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_UhrTyp.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Gewählter Schaltkanal in Steuerung (1..10 = Schaltkanal
+  1..10, 11=nicht verwendet)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_Kanal.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Nachtabsenkung</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_NachtAbs.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Heizgrenzwert Tag</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_HeizGwTag.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Heizgrenzwert Nacht</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_HeizGwNacht.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Heizgrenzwert Hysterese</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_AtGwHyst.1p@
+  °K</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Frostschutzfunktion Grenzwert Ein</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_FrostGwEin.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Frostschutzfunktion Grenzwert Aus</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_FrostGwAus.1p@
+  °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Dauer Kaminkehrer oder IB Fussbodenheizung</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_FbDauer.0p@
+  Std.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Minimale Aussenlufttemperatur (X1)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveX1.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehöriger Sollwert Vorlauftemperatur (Y1)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveY2.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aussenlufttemperatur Stützpunk (X2)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveX2.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehöriger Sollwert Vorlauftemperatur (Y2)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveY2.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Aussenlufttemperatur Stützpunkt (X3)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveX3.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehöriger Sollwert Vorlauftemperatur (Y3)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveY3.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Maximale Aussenlufttemperatur (X4)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveX4.1p@ °C</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Zugehöriger Sollwert Vorlauftemperatur (Y4)</p>
+  </td>
+  <td width=166 valign=top style='width:124.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_KurveY4.1p@ °C</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

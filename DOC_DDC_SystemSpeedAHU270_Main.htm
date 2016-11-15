@@ -1,0 +1,167 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Überschrift @&amp;name@</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-CH>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Lastanforderung @@&amp;name@@</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Ermittlung einer lastabhängigen Freigabe für die 2te (oder
+eine weitere) Stufe einer Lüftungsanlage. Die 2. Stufe kann bei
+Unterschreitung, bei Überschreitung oder bei Unter- oder Überschreitung
+angefordert werden.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Liegt der Istwert der zu überwachenden Grösse über den
+Zeitraum der Einschaltverzögerung außerhalb der Einschalthysterese (Sollwert plus/minus
+der eingestellten Hysterese) wird die 2. Stufe freigegeben. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Liegt der Istwert über den Zeitraum der Ausschaltverzögerung
+innerhalb der Ausschalthysterese wird die Freigabe der 2. Stufe zurückgenommen.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Bei Unterschreibung</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Die Freigabe der 2. Stufe erfolgt wenn der Istwert unter dem
+Sollwert abzüglich Einschalthysterese über den Zeitraum der Einschaltverzögerung
+liegt. Ist der Istwert größer dem Sollwert abzüglich Ausschalthysterese über
+den Zeitraum der Ausschaltverzögerung, wird die Freigabe der 2. Stufe zurückgenommen.
+Wählen Sie diese Einstellung wenn die 2te Stufe bei zu niedrigen Istwerten
+zugeschaltet werden soll.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Bei Überschreibung</b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Die Freigabe der 2. Stufe erfolgt wenn der Istwert über dem
+Sollwert zuzüglich Einschalthysterese über den Zeitraum der Einschaltverzögerung
+liegt. Ist der Istwert kleiner dem Sollwert zuzüglich Ausschalthysterese über
+den Zeitraum der Ausschaltverzögerung, wird die Freigabe der 2. Stufe zurückgenommen.
+Wählen Sie diese Einstellung wenn die 2te Stufe bei zu hohen Istwerten
+zugeschaltet werden soll.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:14.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Parameter</b></p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border:solid windowtext 1.0pt;
+  border-left:none;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Wert</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Einheit</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>????</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Typ der Lastanforderung (1=Aus, 2=Unterschreibung, 3=Überschreitung,
+  4=Beides)</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_LastTyp.0p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Einschalthysterese</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_HystereseEin.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Einschaltverzögerung</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_VerzoegerungEin.1p@
+  s</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Ausschalthysterese</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_HystereseAus.1p@</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:327.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal>Ausschaltverzögerung</p>
+  </td>
+  <td width=185 valign=top style='width:139.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>@adj_VerzoegerungAus.1p@
+  s</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
